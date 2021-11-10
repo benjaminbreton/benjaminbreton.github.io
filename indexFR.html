@@ -30,6 +30,27 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="assets/css/main.css" />
             <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+            
+            <script language="JavaScript">
+                <!--
+                //PLF-/
+                var position=0;
+                var knowledges = ["Swift", "Git", "GitHub", "Unit tests", "TDD", "SwiftUI", "UIKit", "AlamoFire", "URLSession", "CoreData", "UserDefaults", "Realm", "Vision", "AVFoundation", "SpriteKit", "GameplayKit", "MediaPlayer", "NavigationView", "TableView", "CollectionView", "Constraints", "CocoaPods", "MVC", "MVVM", "Agility", "Scrum"];
+                var msg="";
+                for (const knowledge of knowledges) msg = msg + "     " + knowledge;
+                var length=msg.length;
+                var fois=(50/msg.length)+1;
+                          for(i=0;i<=fois;i++) msg+=msg;
+                          function textdefil() {
+                    document.form1.deftext.value=msg.substring(position,position+50);
+                    position++;
+                    if(position == length) position=0;
+                    setTimeout("textdefil()",100);
+                }
+                          window.onload = textdefil;
+                          //-->
+                          </script>
+            
             </head>
     <body class="is-preload">
         
@@ -56,6 +77,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <li><a href="#contact">contact</a></li>
                     </ul>
                 </nav>
+                
+                <form name="form1">
+                    <div align="center">
+                        <input type="text" name="deftext">
+                            </div>
+                </form>
+                
             </header>
             
             <!-- Main -->
@@ -773,7 +801,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <span class="image main"><img src="images/notre_histoire.png" alt="" /></span>
                         <h3 class="major">notre histoire</h3>
                         <ul class="icons">
-                        <li><a href="https://github.com/benjaminbreton/notre_histoire" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://github.com/benjaminbreton/notre_histoire" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
                         </ul>
                         <h6>dernière mise à jour : 2 juillet 2021</h6>
                         <h4>Objet</h4>
