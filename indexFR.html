@@ -43,23 +43,23 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <!--
                 //PLF-/
                 var position=0;
-                var knowledges = ["Swift", "Git", "GitHub", "Unit tests", "TDD", "SwiftUI", "UIKit", "AlamoFire", "URLSession", "CoreData", "UserDefaults", "Realm", "Vision", "AVFoundation", "SpriteKit", "GameplayKit", "MediaPlayer", "NavigationView", "TableView", "CollectionView", "Constraints", "CocoaPods", "MVC", "MVVM", "Agility", "Scrum"];
+                var knowledges = ["Swift", "Git", "GitHub", "Unit tests", "TDD", "SwiftUI", "UIKit", "AlamoFire", "URLSession", "CoreData", "UserDefaults", "Realm", "CoreBluetooth", "CoreImage", "Vision", "AVFoundation", "SpriteKit", "GameplayKit", "MediaPlayer", "NavigationView", "TableView", "CollectionView", "Constraints", "CocoaPods", "MVC", "MVVM", "Agility", "Scrum"];
                 var msg="";
                 for (const knowledge of knowledges) msg = msg + "     " + knowledge;
                 var length=msg.length;
                 var fois=(50/msg.length)+1;
-                          for(i=0;i<=fois;i++) msg+=msg;
-                          function textdefil() {
+                for(i=0;i<=fois;i++) msg+=msg;
+                function textdefil() {
                     document.form1.deftext.value=msg.substring(position,position+50);
                     position++;
                     if(position == length) position=0;
                     setTimeout("textdefil()",100);
                 }
-                          window.onload = textdefil;
-                          //-->
-                          </script>
+                window.onload = textdefil;
+                //-->
+            </script>
             
-            </head>
+    </head>
     <body class="is-preload">
         
         <!-- Wrapper -->
@@ -89,7 +89,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <form name="form1">
                     <div align="center">
                         <input type="text" name="deftext">
-                            </div>
+                    </div>
                 </form>
                 
             </header>
@@ -260,13 +260,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <br>Vous pouvez accéder à l'une ou l'autre de ces catégories en cliquant sur le lien correspondant ci-dessous.<br>
                         <br>
                         <ul class="actions">
-                            <li><a href="#projects_in_progress_perso" class="button">projets en cours (personnels)</a></li>
+                            <li><a href="#projects_in_progress_perso" class="button">projets personnels en cours</a></li>
                         </ul>
                         <ul class="actions">
-                            <li><a href="#projects_realised_perso" class="button">projets réalisés (personnels)</a></li>
+                            <li><a href="#projects_realised_perso" class="button">projets personnels réalisés</a></li>
                         </ul>
                         <ul class="actions">
-                            <li><a href="#projects_realised_OC" class="button">projets réalisés (formation)</a></li>
+                            <li><a href="#projects_realised_OC" class="button">autres projets réalisés</a></li>
                         </ul>
                         </p>
                     </section>
@@ -421,7 +421,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                             <li>d'une traduction d'une langue vers l'anglais ;</li>
                             <li>de la météo d'une ville et celle de la ville de New York.</li>
                         </ul>
-                        Le modèle de l'application doit être intégralement testé.</blockquote>
+                            Le modèle de l'application doit être intégralement testé.</blockquote>
                         <h4>Compétences</h4>
                         <ul>
                             <li>appels réseaux ;</li>
@@ -712,7 +712,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     
                     <!-- Title -->
                     
-                    <h2 class="major">Projets<br> en cours<br> de réalisation<br> (personnels)</h2>
+                    <h2 class="major">Projets<br> personnels<br> en cours<br> de réalisation</h2>
                     
                     <!-- Intro -->
                     
@@ -721,6 +721,46 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <br>
                         <b><i>Cette page présente une liste non exhaustive de projets sur lesquels je travaille actuellement.</b></i>
                         </p>
+                    </section><hr />
+                    
+                    <!-- @uc -->
+                    
+                    <section>
+                        <!-- <span class="image main"><img src="images/project_12.png" alt="" /></span> -->
+                        <h3 class="major">Universal Controller</h3>
+                        <!--<ul class="icons">
+                        <li><a href="https://github.com/benjaminbreton/OC_project_12" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                        </ul>-->
+                        <h6>dernière mise à jour : 10 janvier 2022</h6>
+                        <h4>Objet</h4>
+                        <blockquote>Réaliser un framework SwiftUI permettant de faciliter la connexion d'iPhone comme manettes de jeu, et de personnaliser l'apparence de la manette. Ce projet permet de m'initier à CoreBluetooth.
+                        </blockquote>
+                        <p>
+                        <b>Principe.</b> Pour utiliser une manette sur une application installée sur iPad / iPhone, deux possibilités semblent apparaître :<br>
+                        <ul>
+                            <li>soit vous utilisez une application tierce, ou une vraie manette de jeu, mais qui n'est pas spécialement conçue pour l'application donc peut avoir quelques dysfonctionnements ;</li>
+                            <li>soit vous utilisez une application créée par l'éditeur lui-même, mais dans ce cas il vous faudra autant d'applications qu'il y a d'éditeurs si vous jouez à plusieurs jeux.</li>
+                        </ul>
+                        <br>
+                        Le but de ce projet est de créer une solution hybride. Une manette de jeu qui peut être utilisée sur plusieurs applications d'éditeurs différents, et qui en même temps peut être paramétrée par lesdits éditeurs pour fonctionner correctement sur leurs applications.<br>
+                        <br>
+                        Cela passe donc par un framework. L'éditeur placera ce framework dans son projet, et c'est ce dernier qui va gérer les échanges Bluetooth avec l'application affichant la manette de jeu sur l'iPhone.<br>
+                        L'avantage pour les éditeurs de jeu est qu'ils n'ont absolument pas à se soucier de l'application installée sur l'iPhone pour gérer la manette. De même, ils n'ont pas à gérer CoreBluetooth.<br>
+                        Tout ce qu'ils ont à faire est d'indiquer, via un ViewModifier du framework, quels sont les boutons dont ils ont besoin, éventuellement les personnaliser, et indiquer quelles actions effectuer lorsque le bouton est actionné par l'utilisateur. C'est tout.</b>
+                        <br><br>
+                        <b>Côté technique.</b> Deux sous-projets sont donc réalisés pour ce projet :<br>
+                        <ul>
+                            <li>un framework utilisable par les éditeurs de jeux ;</li>
+                            <li>une application à installer sur les iPhone qui vont servir comme manettes de jeu.</li>
+                        </ul>
+                        </p>
+                        <h4>Compétences</h4>
+                        <ul>
+                            <li>SwiftUI ;</li>
+                            <li>MVVM ;</li>
+                            <li>CoreImage ;</li>
+                            <li>CoreBluetooth.</li>
+                        </ul>
                     </section><hr />
                     
                     <!-- @story -->
@@ -776,7 +816,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     
                     <!-- Title -->
                     
-                    <h2 class="major">Projets<br> réalisés<br> (personnels)</h2>
+                    <h2 class="major">Projets<br> personnels<br> réalisés</h2>
                     
                     <!-- Intro -->
                     
@@ -1005,9 +1045,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         </ul>
                     </form>
                     <ul class="icons">
-                    Étant donné que ma ligne téléphonique est personnelle, mon numéro n'est pas communiqué publiquement en ligne, mais je peux vous le transmettre sur demande :<br>
-                    - par mail en remplissant le formulaire ci-dessus ;<br>
-                    - ou par message sur un réseau social :
+                        Étant donné que ma ligne téléphonique est personnelle, mon numéro n'est pas communiqué publiquement en ligne, mais je peux vous le transmettre sur demande :<br>
+                        - par mail en remplissant le formulaire ci-dessus ;<br>
+                        - ou par message sur un réseau social :
                         <li><a href="https://fr.linkedin.com/in/benjamin-breton-65446b38" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
                         <li><a href="https://twitter.com/bbenj28" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
                     </ul>
@@ -1231,19 +1271,19 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                                 <div class="field half">
                                     <input type="radio" id="demo-priority-low" name="demo-priority" checked>
                                         <label for="demo-priority-low">Low</label>
-                                        </div>
+                                </div>
                                 <div class="field half">
                                     <input type="radio" id="demo-priority-high" name="demo-priority">
                                         <label for="demo-priority-high">High</label>
-                                        </div>
+                                </div>
                                 <div class="field half">
                                     <input type="checkbox" id="demo-copy" name="demo-copy">
                                         <label for="demo-copy">Email me a copy</label>
-                                        </div>
+                                </div>
                                 <div class="field half">
                                     <input type="checkbox" id="demo-human" name="demo-human" checked>
                                         <label for="demo-human">Not a robot</label>
-                                        </div>
+                                </div>
                                 <div class="field">
                                     <label for="demo-message">Message</label>
                                     <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
@@ -1279,7 +1319,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 </h3>
                 <h4>
                     Tentez votre chance en installant <a href="https://github.com/benjaminbreton/TicTacToevsBen" target="_blank" >cette app.</a>
-                    </h4>
+                </h4>
                 </p>
                 <p class="copyright">&copy; Benjamin Breton. Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
             </footer>

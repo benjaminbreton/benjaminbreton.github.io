@@ -43,23 +43,23 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <!--
                 //PLF-/
                 var position=0;
-                var knowledges = ["Swift", "Git", "GitHub", "Unit tests", "TDD", "SwiftUI", "UIKit", "AlamoFire", "URLSession", "CoreData", "UserDefaults", "Realm", "Vision", "AVFoundation", "SpriteKit", "GameplayKit", "MediaPlayer", "NavigationView", "TableView", "CollectionView", "Constraints", "CocoaPods", "MVC", "MVVM", "Agility", "Scrum"];
+                var knowledges = ["Swift", "Git", "GitHub", "Unit tests", "TDD", "SwiftUI", "UIKit", "AlamoFire", "URLSession", "CoreData", "UserDefaults", "Realm", "CoreBluetooth", "CoreImage", "Vision", "AVFoundation", "SpriteKit", "GameplayKit", "MediaPlayer", "NavigationView", "TableView", "CollectionView", "Constraints", "CocoaPods", "MVC", "MVVM", "Agility", "Scrum"];
                 var msg="";
                 for (const knowledge of knowledges) msg = msg + "     " + knowledge;
                 var length=msg.length;
                 var fois=(50/msg.length)+1;
-                          for(i=0;i<=fois;i++) msg+=msg;
-                          function textdefil() {
+                for(i=0;i<=fois;i++) msg+=msg;
+                function textdefil() {
                     document.form1.deftext.value=msg.substring(position,position+50);
                     position++;
                     if(position == length) position=0;
                     setTimeout("textdefil()",100);
                 }
-                          window.onload = textdefil;
-                          //-->
-                          </script>
+                window.onload = textdefil;
+                //-->
+            </script>
             
-            </head>
+    </head>
     <body class="is-preload">
         
         
@@ -91,7 +91,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <form name="form1">
                     <div align="center">
                         <input type="text" name="deftext">
-                            </div>
+                    </div>
                 </form>
                 
             </header>
@@ -263,13 +263,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <br> You can access either of these categories by clicking on the corresponding link below. <br>
                         <br>
                         <ul class="actions">
-                            <li><a href="#projects_in_progress_perso" class="button">projects in progress (personal)</a></li>
+                            <li><a href="#projects_in_progress_perso" class="button">personal projects in progress</a></li>
                         </ul>
                         <ul class="actions">
-                            <li><a href="#projects_realised_perso" class="button">realised projects (personnal)</a></li>
+                            <li><a href="#projects_realised_perso" class="button">personal realised projects</a></li>
                         </ul>
                         <ul class="actions">
-                            <li><a href="#projects_realised_OC" class="button">realised projects (training)</a></li>
+                            <li><a href="#projects_realised_OC" class="button">other realised projects</a></li>
                         </ul>
                         </p>
                     </section>
@@ -423,7 +423,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                             <li> a translation from one language to English; </li>
                             <li> the weather of a city and of the city of New York. </li>
                         </ul>
-                        The application's model must be fully tested.</blockquote>
+                            The application's model must be fully tested.</blockquote>
                         <h4>Skills</h4>
                         <ul>
                             <li>network calls ;</li>
@@ -714,7 +714,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     
                     <!-- Title -->
                     
-                    <h2 class="major">Projects <br>in progress <br>(personal)</h2>
+                    <h2 class="major">Personal <br> projects <br>in progress</h2>
                     
                     <!-- Intro -->
                     
@@ -723,6 +723,46 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <br>
                         <b> <i> This page presents the personal project I am currently working on.</b></i>
                         </p>
+                    </section><hr />
+                    
+                    <!-- @uc -->
+                    
+                    <section>
+                        <!-- <span class="image main"><img src="images/project_12.png" alt="" /></span> -->
+                        <h3 class="major">Universal Controller</h3>
+                        <!--<ul class="icons">
+                        <li><a href="https://github.com/benjaminbreton/OC_project_12" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                        </ul>-->
+                        <h6>last update: 10th January 2022 </h6>
+                        <h4>Object</h4>
+                        <blockquote>Create a SwiftUI framework to facilitate an iPhone connection as game controller, and to customize the controller's appearance. This project introduces me to CoreBluetooth.
+                        </blockquote>
+                        <p>
+                        <b>Principle.</b> To use a controller on an application installed on iPad / iPhone, two possibilities seem to appear: <br>
+                        <ul>
+                            <li>either you are using a third-party application, or a real gamepad, but which is not specially designed for the application so may have some malfunctions; </li>
+                            <li>or you are using an application created by the publisher itself, but in this case you will need as many applications as there are publishers if you play several games.</li>
+                        </ul>
+                        <br>
+                        The goal of this project is to create a hybrid solution. A controller which can be used on several applications from different publishers, and which at the same time can be configured by said publishers to function correctly on their applications. <br>
+                        <br>
+                        It therefore requires a framework. The editor will place this framework in his project, and it will manage the Bluetooth exchanges with the application displaying the controller on the iPhone. <br>
+                        The advantage for game publishers is that they absolutely don't have to worry about the app installed on the iPhone to manage the controller. Likewise, they don't have to manage CoreBluetooth. <br>
+                        All they have to do is indicate, via a framework's ViewModifier, which buttons they need, possibly customize them, and indicate what actions to perform when the button is pressed by the user. That's all. </b>
+                        <br> <br>
+                        <b> Technical side. </b> Two sub-projects are therefore carried out for this project: <br>
+                        <ul>
+                            <li>a framework usable by game publishers;</li>
+                            <li>an application to install on iPhones that will serve as game controllers.</li>
+                        </ul>
+                        </p>
+                        <h4>Skills</h4>
+                        <ul>
+                            <li>SwiftUI ;</li>
+                            <li>MVVM ;</li>
+                            <li>CoreImage ;</li>
+                            <li>CoreBluetooth.</li>
+                        </ul>
                     </section><hr />
                     
                     <!-- @story -->
@@ -780,7 +820,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     
                     <!-- Title -->
                     
-                    <h2 class="major">Realised<br> projects<br> (personnal)</h2>
+                    <h2 class="major">Personal<br> realised<br> projects</h2>
                     
                     <!-- Intro -->
                     
@@ -1236,19 +1276,19 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                                 <div class="field half">
                                     <input type="radio" id="demo-priority-low" name="demo-priority" checked>
                                         <label for="demo-priority-low">Low</label>
-                                        </div>
+                                </div>
                                 <div class="field half">
                                     <input type="radio" id="demo-priority-high" name="demo-priority">
                                         <label for="demo-priority-high">High</label>
-                                        </div>
+                                </div>
                                 <div class="field half">
                                     <input type="checkbox" id="demo-copy" name="demo-copy">
                                         <label for="demo-copy">Email me a copy</label>
-                                        </div>
+                                </div>
                                 <div class="field half">
                                     <input type="checkbox" id="demo-human" name="demo-human" checked>
                                         <label for="demo-human">Not a robot</label>
-                                        </div>
+                                </div>
                                 <div class="field">
                                     <label for="demo-message">Message</label>
                                     <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
